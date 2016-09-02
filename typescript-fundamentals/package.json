@@ -1,0 +1,10 @@
+{
+  "name": "typescript-fundamentals",
+  "version": "1.0.0",
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "2.0.0"
+  }
+}
