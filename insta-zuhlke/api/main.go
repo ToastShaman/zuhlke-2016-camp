@@ -6,15 +6,22 @@ import (
 	"time"
 
 	"./images"
+	"./ws"
 
 	"github.com/gorilla/mux"
 )
 
 func main() {
+	hub := ws.NewHub()
+	go hub.Run()
+
 	r := mux.NewRouter()
 	r.HandleFunc("/images", images.List).Methods("GET")
 	r.HandleFunc("/images", images.Upsert).Methods("POST")
 	r.PathPrefix("/images/").Handler(http.StripPrefix("/images/", http.FileServer(http.Dir("./static"))))
+	r.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
+		ws.ServeWs(hub, w, r)
+	})
 
 	srv := &http.Server{
 		Handler:      r,
