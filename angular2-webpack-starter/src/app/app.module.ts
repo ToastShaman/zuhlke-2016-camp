@@ -13,6 +13,7 @@ import { ROUTES } from './app.routes';
 // App is our top level component
 import { App } from './app.component';
 import { NoContent } from './no-content';
+import { Hello } from './hello/hello.component';
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
@@ -21,7 +22,8 @@ import { NoContent } from './no-content';
   bootstrap: [ App ],
   declarations: [
     App,
-    NoContent
+    NoContent,
+    Hello
   ],
   imports: [ // import Angular's modules
     BrowserModule,

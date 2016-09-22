@@ -3241,9 +3241,9 @@
       }
     },
     "pbkdf2": {
-      "version": "3.0.7",
+      "version": "3.0.8",
       "from": "pbkdf2@>=3.0.3 <4.0.0",
-      "resolved": "https://registry.npmjs.org/pbkdf2/-/pbkdf2-3.0.7.tgz"
+      "resolved": "https://registry.npmjs.org/pbkdf2/-/pbkdf2-3.0.8.tgz"
     },
     "pify": {
       "version": "2.3.0",
